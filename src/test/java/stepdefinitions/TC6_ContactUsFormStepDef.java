@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.TC6_ContactUsFormPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 import static utilities.ReusableMethods.getFaker;
@@ -37,7 +38,7 @@ public class TC6_ContactUsFormStepDef {
 
     @And("I upload file")
     public void ıUploadFile() {
-        String file = "C:\\yazilim\\automationExerciseWithCucumber\\src\\test\\resources\\TestFiles\\contactUsTestFiles.jpg";
+        String file =System.getProperty("user.dir") + "/" + ConfigReader.getProperty("file.upload.path");
         tc6_contactUsFormPage.contactUsUploadButton.sendKeys(file);
     }
 

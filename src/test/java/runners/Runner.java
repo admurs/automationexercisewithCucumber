@@ -16,11 +16,10 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-         tags = "@All or @RegisterUser",
-      //    tags="@Test",
+          tags = "@All or @RegisterUser",
+        // tags="@Test",
         dryRun = false
 )
 public class Runner {
-//git için ekleme yapıldı
-    //ikinci kez git için ekleme yapıldı
+
 }

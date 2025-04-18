@@ -7,10 +7,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class TC1_RegisterUserPage {
-    public TC1_RegisterUserPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class TC1_RegisterUserPage extends BasePage {
     @FindBy(xpath = "//a[@href='/login']")
     public WebElement signUpLoginButton;
     @FindBy(xpath = "//*[contains(text(),'New User Signup!')]")

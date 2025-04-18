@@ -5,10 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class TC2_LoginUserCorrectPage {
-    public TC2_LoginUserCorrectPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class TC2_LoginUserCorrectPage extends BasePage{
 
     @FindBy(xpath = "//*[contains(text(),'Login to your account')]")
     public WebElement loginText;

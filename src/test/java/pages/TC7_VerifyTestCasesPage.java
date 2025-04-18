@@ -7,10 +7,7 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class TC7_VerifyTestCasesPage {
-    public TC7_VerifyTestCasesPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class TC7_VerifyTestCasesPage extends BasePage{
     @FindBy(xpath = "//a[@href='/test_cases']")
     public WebElement testCasesPage;
 
