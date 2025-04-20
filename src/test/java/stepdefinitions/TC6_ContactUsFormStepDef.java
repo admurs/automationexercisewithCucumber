@@ -8,7 +8,8 @@ import pages.TC6_ContactUsFormPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import static utilities.ReusableMethods.getFaker;
+import static utilities.BrowserUtils.getFaker;
+
 
 public class TC6_ContactUsFormStepDef {
     TC6_ContactUsFormPage tc6_contactUsFormPage=new TC6_ContactUsFormPage();

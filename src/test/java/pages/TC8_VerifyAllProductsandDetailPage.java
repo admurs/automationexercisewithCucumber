@@ -19,7 +19,7 @@ public class TC8_VerifyAllProductsandDetailPage extends BasePage{
     @FindBy(xpath = "//img[contains(@src, '/get_product_picture/')]")
     public List<WebElement>  productImageList;
 
-    @FindBy(xpath = "//a[@href='/product_details/1']")
+    @FindBy(xpath = "//div[@class='choose']//ul[@class='nav nav-pills nav-justified']")
     public WebElement productViewButton;
 
     @FindBy(xpath = "//div[@class='product-information']/h2")

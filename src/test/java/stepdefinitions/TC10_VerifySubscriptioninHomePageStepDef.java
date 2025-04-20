@@ -4,15 +4,15 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.TC10_VerifySubscriptioninHomePage;
-import utilities.ReusableMethods;
+import utilities.BrowserUtils;
 
-import static utilities.ReusableMethods.getFaker;
+import static utilities.BrowserUtils.getFaker;
 
 public class TC10_VerifySubscriptioninHomePageStepDef {
     TC10_VerifySubscriptioninHomePage tc10_verifySubscriptioninHomePage=new TC10_VerifySubscriptioninHomePage();
     @When("I scroll down to footer")
     public void ıScrollDownToFooter() {
-        ReusableMethods.jsScroll(tc10_verifySubscriptioninHomePage.subscriptionText);
+        BrowserUtils.clickWithJS(tc10_verifySubscriptioninHomePage.subscriptionText);
     }
 
     @Then("I verify text SUBSCRIPTION")

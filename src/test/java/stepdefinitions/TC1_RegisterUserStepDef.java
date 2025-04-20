@@ -5,13 +5,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.bidi.module.Browser;
 import pages.TC1_RegisterUserPage;
+import utilities.BrowserUtils;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
 
-import static utilities.ReusableMethods.getFaker;
+import static utilities.BrowserUtils.getFaker;
 
 public class TC1_RegisterUserStepDef {
     TC1_RegisterUserPage tc1_registerUserPage =new TC1_RegisterUserPage();
@@ -61,10 +62,10 @@ public class TC1_RegisterUserStepDef {
 
     @When("I fill details: Title, Name, Email, Password, Date of birth")
     public void ıFillDetailsTitleNameEmailPasswordDateOfBirth() {
-        ReusableMethods.titleSelected(tc1_registerUserPage.titleRadioButton).click();
+        BrowserUtils.randomSelected(tc1_registerUserPage.titleRadioButton).click();
         String password = getFaker().internet().password();
         tc1_registerUserPage.accountPasswordText.sendKeys(password);
-        ReusableMethods.selectBirthDate(tc1_registerUserPage.selectDaysDrop, tc1_registerUserPage.selectMonthsDrop, tc1_registerUserPage.selectYearsDrop);
+        BrowserUtils.selectBirthDate(tc1_registerUserPage.selectDaysDrop, tc1_registerUserPage.selectMonthsDrop, tc1_registerUserPage.selectYearsDrop);
 
     }
 
@@ -95,7 +96,7 @@ public class TC1_RegisterUserStepDef {
         tc1_registerUserPage.companyNameText.sendKeys(companyName);
         tc1_registerUserPage.addressText.sendKeys(address);
         tc1_registerUserPage.address2Text.sendKeys(address2);
-        ReusableMethods.selectCountry(tc1_registerUserPage.countryDrop);
+        BrowserUtils.selectCountry(tc1_registerUserPage.countryDrop);
         tc1_registerUserPage.stateText.sendKeys(state);
         tc1_registerUserPage.cityText.sendKeys(city);
         tc1_registerUserPage.zipcodeText.sendKeys(zipCode);

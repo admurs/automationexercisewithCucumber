@@ -6,9 +6,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import pages.TC9_SearchProductPage;
-import utilities.ReusableMethods;
-
-import java.util.List;
 
 public class TC9_SearchProductSrepDef {
     String searchItem;

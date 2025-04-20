@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.TC8_VerifyAllProductsandDetailPage;
+import utilities.BrowserUtils;
 import utilities.Driver;
 
 public class TC8_VerifyAllProductsandDetailPageStepDef {
@@ -29,6 +30,7 @@ public class TC8_VerifyAllProductsandDetailPageStepDef {
 
     @When("I click on View Product of first product")
     public void ıClickOnViewProductOfFirstProduct() {
+        BrowserUtils.clickWithJS(tc8_verifyAllProductsandDetailPage.productViewButton);
         tc8_verifyAllProductsandDetailPage.productViewButton.click();
     }
 
@@ -43,11 +45,11 @@ public class TC8_VerifyAllProductsandDetailPageStepDef {
 
     @And("I verify that detail is visible: product name, category, price, availability, condition, brand")
     public void ıVerifyThatDetailIsVisibleProductNameCategoryPriceAvailabilityConditionBrand() {
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productNameText.isDisplayed());
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productCategoryText.isDisplayed());
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productPriceText.isDisplayed());
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productAvailabilityText.isDisplayed());
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productConditionText.isDisplayed());
-        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productBrandText.isDisplayed());
+        Assert.assertTrue(tc8_verifyAllProductsandDetailPage.productNameText.isDisplayed()&&
+        tc8_verifyAllProductsandDetailPage.productCategoryText.isDisplayed()&&
+        tc8_verifyAllProductsandDetailPage.productPriceText.isDisplayed()&&
+        tc8_verifyAllProductsandDetailPage.productAvailabilityText.isDisplayed()&&
+        tc8_verifyAllProductsandDetailPage.productConditionText.isDisplayed()&&
+        tc8_verifyAllProductsandDetailPage.productBrandText.isDisplayed());
     }
 }

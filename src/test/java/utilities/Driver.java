@@ -310,16 +310,7 @@ public class Driver {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
-    //Auto gun ay yil secim
-    public static void selectDropDown(WebElement element){
 
-        List<WebElement> list = ReusableMethods.select(element).getOptions();
-        int index = ReusableMethods.random().nextInt(list.size());
-        while (index == 0){
-            index = ReusableMethods.random().nextInt(list.size());
-        }
-        ReusableMethods.select(element).selectByIndex(index);
-    }
 
 
 }

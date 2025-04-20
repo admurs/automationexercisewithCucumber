@@ -8,11 +8,11 @@ import org.openqa.selenium.TakesScreenshot;
 
 
 import pages.TC1_RegisterUserPage;
+import utilities.BrowserUtils;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 
-import static utilities.ReusableMethods.getFaker;
+import static utilities.BrowserUtils.getFaker;
 
 
 
@@ -32,10 +32,10 @@ public class Hooks {
         tc1_registerUserPage.nameText.sendKeys(name);
         tc1_registerUserPage.emailText.sendKeys(email);
         tc1_registerUserPage.signUpButton.click();
-        ReusableMethods.titleSelected(tc1_registerUserPage.titleRadioButton).click();
+        BrowserUtils.randomSelected(tc1_registerUserPage.titleRadioButton).click();
         password = getFaker().internet().password();
         tc1_registerUserPage.accountPasswordText.sendKeys(password);
-        ReusableMethods.selectBirthDate(tc1_registerUserPage.selectDaysDrop, tc1_registerUserPage.selectMonthsDrop, tc1_registerUserPage.selectYearsDrop);
+        BrowserUtils.selectBirthDate(tc1_registerUserPage.selectDaysDrop, tc1_registerUserPage.selectMonthsDrop, tc1_registerUserPage.selectYearsDrop);
         tc1_registerUserPage.checkBox1.click();
         tc1_registerUserPage.checkBox2.click();
         String firstName = getFaker().name().firstName();
@@ -52,7 +52,7 @@ public class Hooks {
         tc1_registerUserPage.companyNameText.sendKeys(companyName);
         tc1_registerUserPage.addressText.sendKeys(address);
         tc1_registerUserPage.address2Text.sendKeys(address2);
-        ReusableMethods.selectCountry(tc1_registerUserPage.countryDrop);
+        BrowserUtils.selectCountry(tc1_registerUserPage.countryDrop);
         tc1_registerUserPage.stateText.sendKeys(state);
         tc1_registerUserPage.cityText.sendKeys(city);
         tc1_registerUserPage.zipcodeText.sendKeys(zipCode);
