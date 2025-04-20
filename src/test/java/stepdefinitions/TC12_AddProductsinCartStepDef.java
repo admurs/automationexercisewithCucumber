@@ -10,7 +10,8 @@ public class TC12_AddProductsinCartStepDef {
 
     TC12_AddProductsinCartPage tc12_addProductsinCartPage=new TC12_AddProductsinCartPage();
 
-    String firstProductPrice,secondProductPrice,defaultQuantity="1";
+    String firstProductPrice,secondProductPrice;
+    Integer defaultQuantity=1;
 
     @And("I hover over first product and click Add to cart")
     public void ıHoverOverFirstProductAndClickAddToCart() {
@@ -48,11 +49,11 @@ public class TC12_AddProductsinCartStepDef {
     @And("I verify their prices, quantity and total price")
     public void ıVerifyTheirPricesQuantityAndTotalPrice() {
         Assert.assertEquals(firstProductPrice,tc12_addProductsinCartPage.viewCartFirstProductPrice.getText());
-        Assert.assertEquals(defaultQuantity,tc12_addProductsinCartPage.viewCartFirstProductQuantity.getText());
+        Assert.assertEquals(String.valueOf(defaultQuantity),tc12_addProductsinCartPage.viewCartFirstProductQuantity.getText());
         Assert.assertEquals(firstProductPrice,tc12_addProductsinCartPage.viewCartFirstProductTotal.getText());
 
         Assert.assertEquals(secondProductPrice,tc12_addProductsinCartPage.viewCartSecondProductPrice.getText());
-        Assert.assertEquals(defaultQuantity,tc12_addProductsinCartPage.viewCartSecondProductQuantity.getText());
+        Assert.assertEquals(String.valueOf(defaultQuantity),tc12_addProductsinCartPage.viewCartSecondProductQuantity.getText());
         Assert.assertEquals(secondProductPrice,tc12_addProductsinCartPage.viewCartSecondProductTotal.getText());
 
     }
