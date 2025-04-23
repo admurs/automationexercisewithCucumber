@@ -5,7 +5,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.bidi.module.Browser;
 import pages.TC1_RegisterUserPage;
 import utilities.BrowserUtils;
 import utilities.ConfigReader;
@@ -96,7 +95,7 @@ public class TC1_RegisterUserStepDef {
         tc1_registerUserPage.companyNameText.sendKeys(companyName);
         tc1_registerUserPage.addressText.sendKeys(address);
         tc1_registerUserPage.address2Text.sendKeys(address2);
-        BrowserUtils.selectCountry(tc1_registerUserPage.countryDrop);
+        BrowserUtils.selectCountryAndGetName(tc1_registerUserPage.countryDrop);
         tc1_registerUserPage.stateText.sendKeys(state);
         tc1_registerUserPage.cityText.sendKeys(city);
         tc1_registerUserPage.zipcodeText.sendKeys(zipCode);

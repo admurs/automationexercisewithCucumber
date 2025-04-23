@@ -20,9 +20,8 @@ import java.util.List;
 import java.util.Random;
 
 public class BrowserUtils {
-
-    static Faker faker;
     static Random random= new Random();
+    static Faker faker;
 
     public static Faker getFaker() { // getFaker method
         return faker = new Faker();
@@ -211,7 +210,15 @@ public class BrowserUtils {
         select.selectByVisibleText(option);
     }
 
-    public static  WebElement randomSelected(List<WebElement> element){
+
+
+    public static void findAndClick(WebElement webElement) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(webElement));
+        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", webElement);
+    }
+
+    public static WebElement randomSelected(List<WebElement> element){
         return element.get(random.nextInt(element.size()));
     }
 
@@ -224,17 +231,14 @@ public class BrowserUtils {
         yearSelect.selectByValue(String.valueOf(1900 + random.nextInt(122)));
     }
 
-    public static void selectCountry(WebElement element){
+
+    public static String selectCountryAndGetName(WebElement element) {
         Select countrySelect = new Select(element);
         List<WebElement> options = countrySelect.getOptions();
         int randomIndex = random.nextInt(options.size());
         WebElement randomOption = options.get(randomIndex);
-        countrySelect.selectByVisibleText(randomOption.getText());
-    }
-
-    public static void findAndClick(WebElement webElement) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(webElement));
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", webElement);
+        String selectedCountry = randomOption.getText();
+        countrySelect.selectByVisibleText(selectedCountry);
+        return selectedCountry;
     }
 }
