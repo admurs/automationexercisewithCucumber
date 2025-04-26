@@ -45,7 +45,7 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
                 //default:
-                  //  driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                //  driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
             }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

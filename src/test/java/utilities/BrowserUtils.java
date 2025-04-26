@@ -241,4 +241,62 @@ public class BrowserUtils {
         countrySelect.selectByVisibleText(selectedCountry);
         return selectedCountry;
     }
+
+
+
+    public static String convertTurkishCharsToEnglish(String text) {
+        if (text == null) {
+            return null;
+        }
+
+        StringBuilder sb = new StringBuilder(text.length());
+        for (int i = 0; i < text.length(); i++) {
+            char currentChar = text.charAt(i);
+            switch (currentChar) {
+                case 'İ':
+                    sb.append('I');
+                    break;
+                case 'ı':
+                    sb.append('i');
+                    break;
+                case 'Ş':
+                    sb.append('S');
+                    break;
+                case 'ş':
+                    sb.append('s');
+                    break;
+                case 'Ç':
+                    sb.append('C');
+                    break;
+                case 'ç':
+                    sb.append('c');
+                    break;
+                case 'Ğ':
+                    sb.append('G');
+                    break;
+                case 'ğ':
+                    sb.append('g');
+                    break;
+                case 'Ö':
+                    sb.append('O');
+                    break;
+                case 'ö':
+                    sb.append('o');
+                    break;
+                case 'Ü':
+                    sb.append('U');
+                    break;
+                case 'ü':
+                    sb.append('u');
+                    break;
+                default:
+                    sb.append(currentChar);
+                    break;
+            }
+        }
+        return sb.toString();
+
 }
+}
+
+
