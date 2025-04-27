@@ -27,30 +27,34 @@ public class TC18_ViewCategoryProductsStepDef {
 
     @And("I click on any category link under Women category, for example: Dress")
     public void ıClickOnAnyCategoryLinkUnderWomenCategoryForExampleDress() {
-       WebElement element= BrowserUtils.randomSelected(tc18_viewCategoryProductsPage.subCategory);
-       text =element.findElement(By.xpath("./a")).getText();
-       element.findElement(By.xpath("./a")).click();
+      subCategoryProcces();
 
     }
 
     @Then("I verify that category page is displayed and confirm text WOMEN - TOPS PRODUCTS")
     public void ıVerifyThatCategoryPageIsDisplayedAndConfirmTextWOMENTOPSPRODUCTS() {
-        Assert.assertTrue(BrowserUtils.convertTurkishCharsToEnglish(tc18_viewCategoryProductsPage.categoryProductsVerify.getText().toUpperCase()).contains(text.toUpperCase()));
-        Assert.assertTrue(BrowserUtils.convertTurkishCharsToEnglish(tc18_viewCategoryProductsPage.categoryTitleVerify.getText().toUpperCase()).contains(text.toUpperCase()));
+        verifyCategory();
     }
 
     @When("On left side bar, I click on any sub-category link of Men category")
     public void onLeftSideBarIClickOnAnySubCategoryLinkOfMenCategory() {
         BrowserUtils.clickWithJS(tc18_viewCategoryProductsPage.menCategory);
         tc18_viewCategoryProductsPage.menCategory.click();
-        WebElement element= BrowserUtils.randomSelected(tc18_viewCategoryProductsPage.subCategory);
-        text = element.findElement(By.xpath("./a")).getText();
-        element.findElement(By.xpath("./a")).click();
+        subCategoryProcces();
     }
 
     @Then("I verify that user is navigated to that category page")
     public void ıVerifyThatUserIsNavigatedToThatCategoryPage() {
 
+        verifyCategory();
+    }
+
+    private void subCategoryProcces(){
+        WebElement element= BrowserUtils.randomSelected(tc18_viewCategoryProductsPage.subCategory);
+        text = element.findElement(By.xpath("./a")).getText();
+        element.findElement(By.xpath("./a")).click();
+    }
+    private void verifyCategory(){
         Assert.assertTrue(BrowserUtils.convertTurkishCharsToEnglish(tc18_viewCategoryProductsPage.categoryProductsVerify.getText().toUpperCase()).contains(text.toUpperCase()));
         Assert.assertTrue(BrowserUtils.convertTurkishCharsToEnglish(tc18_viewCategoryProductsPage.categoryTitleVerify.getText().toUpperCase()).contains(text.toUpperCase()));
     }

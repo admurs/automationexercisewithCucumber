@@ -30,6 +30,7 @@ public class TC10_VerifySubscriptioninHomePageStepDef {
 
     @Then("I verify success message You have been successfully subscribed! is visible")
     public void ıVerifySuccessMessageYouHaveBeenSuccessfullySubscribedIsVisible() {
+
         Assert.assertTrue(tc10_verifySubscriptioninHomePage.subscriptionSuccess.isDisplayed());
     }
 }

@@ -297,6 +297,10 @@ public class BrowserUtils {
         return sb.toString();
 
 }
+    public static String textRegex(WebElement element) {
+        String rawText = element.getText();
+        return rawText.replaceAll("[0-9()]", "").trim();
+    }
 }
 
 
