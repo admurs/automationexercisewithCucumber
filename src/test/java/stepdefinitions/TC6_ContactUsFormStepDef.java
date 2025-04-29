@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.TC6_ContactUsFormPage;
+import utilities.BrowserUtils;
 import utilities.ConfigReader;
 import utilities.Driver;
 
@@ -45,7 +46,9 @@ public class TC6_ContactUsFormStepDef {
 
     @And("I click Submit button")
     public void ıClickSubmitButton() {
+        BrowserUtils.scrollToElement(tc6_contactUsFormPage.contactUsSubmitButton);
         tc6_contactUsFormPage.contactUsSubmitButton.click();
+
     }
 
     @And("I click OK button")

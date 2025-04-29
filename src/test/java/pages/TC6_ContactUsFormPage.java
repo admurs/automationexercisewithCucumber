@@ -27,7 +27,7 @@ public class TC6_ContactUsFormPage extends BasePage{
     @FindBy(xpath = "   //input[@name='upload_file']")
     public WebElement contactUsUploadButton;
 
-    @FindBy(xpath = "   //input[@data-qa='submit-button']")
+    @FindBy(xpath = "   (//*[contains(@type, 'submit')])[1]")
     public WebElement contactUsSubmitButton;
 
     @FindBy(xpath = "//*[contains(text(),'Success! Your details have been submitted successfully.')]")
