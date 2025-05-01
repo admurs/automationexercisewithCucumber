@@ -20,6 +20,8 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
 
+
+
 public class BrowserUtils {
     static Random random = new Random();
     static Faker faker;
@@ -350,6 +352,37 @@ public class BrowserUtils {
                         }
                     });
         } catch (IOException e) {
+        }
+    }
+    public static void slowScrollToBottom() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        long windowHeight = (long) js.executeScript("return window.innerHeight");
+        long currentPosition = 0;
+        long documentHeight = (long) js.executeScript("return document.body.scrollHeight");
+
+        while (currentPosition < documentHeight) {
+            currentPosition += windowHeight / 1;
+            js.executeScript("window.scrollTo(0, " + currentPosition + ")");
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+
+    public static void slowScrollToTop() {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        long currentPosition = (long) js.executeScript("return window.pageYOffset");
+
+        while (currentPosition > 0) {
+            currentPosition -= 1000;
+            js.executeScript("window.scrollTo(0, " + Math.max(0, currentPosition) + ")");
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
 }

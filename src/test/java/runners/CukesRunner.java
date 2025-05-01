@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-            tags = "@All or @RegisterUser",
-        //       tags="@Test",
+             tags = "@All or @RegisterUser",
+        //    tags="@Test",
         dryRun = false
 )
 public class CukesRunner {
