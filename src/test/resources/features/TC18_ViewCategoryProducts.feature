@@ -1,7 +1,7 @@
 @All
 Feature: Category Navigation
 
-  Scenario: Verify category and sub-category navigation
+  Scenario: TC18 Verify category and sub-category navigation
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that categories are visible on left side bar

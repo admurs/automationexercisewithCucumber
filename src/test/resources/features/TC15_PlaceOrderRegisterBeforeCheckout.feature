@@ -1,7 +1,7 @@
 @All
 Feature: Complete Purchase Flow with Account Creation
 
-  Scenario: End-to-end purchase process with new account
+  Scenario: TC15 End-to-end purchase process with new account
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

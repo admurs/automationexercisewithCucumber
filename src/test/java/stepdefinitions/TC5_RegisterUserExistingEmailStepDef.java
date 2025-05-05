@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.testng.Assert;
 import pages.TC1_RegisterUserPage;
 import pages.TC2_LoginUserCorrectPage;
 import pages.TC5_RegisterUserExistingEmailPage;

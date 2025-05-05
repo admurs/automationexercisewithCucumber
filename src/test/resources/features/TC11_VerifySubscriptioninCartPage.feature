@@ -1,7 +1,7 @@
 @All
 Feature: Cart Page Subscription Verification
 
-  Scenario: Verify subscription from cart page
+  Scenario: TC11 Verify subscription from cart page
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

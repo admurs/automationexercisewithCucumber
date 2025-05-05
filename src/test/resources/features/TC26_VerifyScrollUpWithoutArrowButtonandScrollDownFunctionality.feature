@@ -1,7 +1,7 @@
 @All
 Feature: Page Scroll Functionality Verification
 
-  Scenario: Verify page scroll down and scroll up functionality
+  Scenario: TC26 Verify page scroll down and scroll up functionality
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

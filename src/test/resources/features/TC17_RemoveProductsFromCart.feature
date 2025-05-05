@@ -1,7 +1,7 @@
 @All
 Feature: Product Removal from Cart
 
-  Scenario: Remove product from shopping cart
+  Scenario: TC17 Remove product from shopping cart
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

@@ -1,7 +1,7 @@
 @All
 Feature: End-to-End Account and Checkout Process
 
-  Scenario: Complete user registration, checkout verification, and account deletion
+  Scenario: TC23 Complete user registration, checkout verification, and account deletion
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

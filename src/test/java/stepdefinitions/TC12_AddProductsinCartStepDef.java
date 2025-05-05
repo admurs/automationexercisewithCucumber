@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.junit.Assert;
+import org.testng.Assert;
 import pages.TC12_AddProductsinCartPage;
 import utilities.BrowserUtils;
 

@@ -4,7 +4,7 @@ Feature: User Registration with Existing Email
   I want to attempt registration with an existing email
   So that I can verify the system prevents duplicate registrations
 
-  Scenario: Registration attempt with existing email
+  Scenario: TC5 Registration attempt with existing email
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

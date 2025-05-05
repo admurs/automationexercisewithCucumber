@@ -4,7 +4,7 @@ Feature: User Registration and Account Deletion
   I want to register a new account and then delete it
   So that I can verify the account lifecycle functionality
 
-  Scenario: Successful user registration and account deletion
+  Scenario: TC1 Successful user registration and account deletion
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

@@ -1,13 +1,11 @@
 package runners;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
-
-@RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
+                "pretty",
                 "json:target/cucumber.json",
                 "html:target/default-html-reports.html",
                 "rerun:target/rerun.txt"
@@ -18,6 +16,6 @@ import org.junit.runner.RunWith;
         //    tags="@Test",
         dryRun = false
 )
-public class CukesRunner {
+public class CukesRunner extends AbstractTestNGCucumberTests {
 
 }

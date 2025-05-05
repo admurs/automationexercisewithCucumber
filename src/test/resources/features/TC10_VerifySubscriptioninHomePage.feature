@@ -1,7 +1,7 @@
 @All
 Feature: Subscription Verification
 
-  Scenario: Verify subscription functionality
+  Scenario: TC10 Verify subscription functionality
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

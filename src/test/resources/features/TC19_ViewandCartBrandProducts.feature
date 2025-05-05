@@ -1,7 +1,7 @@
 @All
 Feature: Brand Navigation Functionality
 
-  Scenario: Verify brand navigation and product display
+  Scenario: TC19 Verify brand navigation and product display
     Given I launch the browser
     When I navigate to url automationexercise
     And I click on Products button

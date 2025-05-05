@@ -1,7 +1,7 @@
 @All
 Feature: Product Details Page Verification
 
-  Scenario: Verify product details page functionality
+  Scenario: TC8 Verify product details page functionality
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

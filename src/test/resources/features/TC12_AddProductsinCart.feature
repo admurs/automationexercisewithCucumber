@@ -1,7 +1,7 @@
 @All
 Feature: Product Cart Management
 
-  Scenario: Add multiple products to cart and verify details
+  Scenario: TC12 Add multiple products to cart and verify details
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

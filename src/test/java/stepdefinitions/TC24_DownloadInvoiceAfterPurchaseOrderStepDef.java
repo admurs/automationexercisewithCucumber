@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.testng.Assert;
 import pages.TC24_DownloadInvoiceAfterPurchaseOrderPage;
 import utilities.BrowserUtils;
 

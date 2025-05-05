@@ -1,17 +1,19 @@
 package runners;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
 
-@RunWith(Cucumber.class)
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
+
+
 @CucumberOptions(
         plugin = {
-                "html:target/failed-html-report.html"
+                "pretty",
+                "html:target/failed-html-report.html",
+                "rerun:target/rerun.txt"
         },
         features = "@target/rerun.txt",
         glue = "stepdefinitions"
 )
-public class FailedTestRunner {
+public class FailedTestRunner extends AbstractTestNGCucumberTests {
 
 }

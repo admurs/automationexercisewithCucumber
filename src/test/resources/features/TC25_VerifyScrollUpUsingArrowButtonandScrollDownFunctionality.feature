@@ -1,7 +1,7 @@
 @All
 Feature: Page Scroll and Subscription Verification
 
-  Scenario: Verify page scroll functionality and subscription visibility
+  Scenario: TC25 Verify page scroll functionality and subscription visibility
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

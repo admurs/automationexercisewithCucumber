@@ -2,7 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 import pages.TC13_VerifyProductQuantityinCartPage;
 import pages.TC21_AddReviewOnProductPage;

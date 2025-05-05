@@ -4,7 +4,7 @@ Feature: User Login and Account Deletion
   I want to login and delete my account
   To verify account management functionality
 
-  Scenario: Successful login and account deletion
+  Scenario: TC2 Successful login and account deletion
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

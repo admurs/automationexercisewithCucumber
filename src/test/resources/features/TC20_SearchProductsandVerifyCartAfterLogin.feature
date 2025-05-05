@@ -1,7 +1,7 @@
 @All
 Feature: Product Search and Cart Verification
 
-  Scenario Outline: Verify product search and cart persistence after login
+  Scenario Outline: TC20 Verify product search and cart persistence after login
     Given I launch the browser
     When I navigate to url automationexercise
     And I click on Products button

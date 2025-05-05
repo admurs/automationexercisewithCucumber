@@ -4,7 +4,7 @@ Feature: User Login and Logout Functionality
   I want to login and logout from my account
   So that I can verify the authentication workflow
 
-  Scenario: Successful login and logout
+  Scenario: TC4 Successful login and logout
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

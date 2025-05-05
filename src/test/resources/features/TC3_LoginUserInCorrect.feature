@@ -4,7 +4,7 @@ Feature: User Login with Invalid Credentials
   I want to attempt login with invalid credentials
   So that I can verify the systems error handling for incorrect login attempts
 
-  Scenario: Failed login attempt with incorrect credentials
+  Scenario: TC3 Failed login attempt with incorrect credentials
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

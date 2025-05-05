@@ -1,7 +1,7 @@
 @RegisterUser
 Feature: Complete Purchase Flow with Existing Account
 
-  Scenario: End-to-end purchase process with logged in user
+  Scenario: TC16 End-to-end purchase process with logged in user
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

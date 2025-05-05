@@ -4,7 +4,7 @@ Feature: Contact Us Form Functionality
   I want to use the contact form
   So that I can verify its functionality
 
-  Scenario: Complete contact form process
+  Scenario: TC6 Complete contact form process
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully

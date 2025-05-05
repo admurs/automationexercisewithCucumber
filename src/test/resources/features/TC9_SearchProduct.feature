@@ -1,7 +1,7 @@
 @All
 Feature: Product Search Functionality
 
-  Scenario Outline: Verify product search functionality
+  Scenario Outline: TC9 Verify product search functionality
     Given I launch the browser
     When I navigate to url automationexercise
     Then I verify that home page is visible successfully
